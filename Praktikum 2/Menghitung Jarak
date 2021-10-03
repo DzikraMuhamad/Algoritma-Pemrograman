@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul  : Praktikum 2
+Hari,tanggal : Minggu, 20211003
+NIM : 065002100028
+@Author :Dzikra Muhamad Shafi
+"""
+#Display Program Welcome
+import math
+
+Lat1 = float(input('Masukkan lattitude kota pertama: '))
+Long1 = float(input('Masukkan longitude kota pertama: '))
+Lat2 = float(input('Masukkan lattitude kota kedua: '))
+Long2 = float(input('Masukkan longitude kota kedua: '))
+
+CA = (Lat2 - Lat1)
+DB = (Long2 - Long1)
+a = math.sin(math.radians(CA / 2))**2 + math.cos(math.radians(Lat1)) * math.cos(math.radians(Lat2)) * math.sin(math.radians(DB / 2))**2
+c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
+R = 6371.01
+d = R * c
+
+print('Jarak antara dua titik kota adalah', d)
