@@ -1,0 +1,35 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul  : Praktikum 2
+Hari,tanggal : Senin, 20211004
+NIM : 065002100028
+@Author :Dzikra Muhamad Shafi
+"""
+#Display Program Welcome
+#Input besaran A,B,dan C
+A = int(input('Panjang sisi A: '))
+B = int(input('Panjang sisi B: '))
+C = int(input('Panjang sisi C: '))
+
+valueA = (A)
+valueB = (B)
+valueC = (C)
+V = valueC**2
+W = valueA**2 + valueB**2
+S = valueA + valueB <= valueC
+T = valueA + valueC <= valueB
+U = valueB + valueC <= valueA
+
+
+if valueA == valueB == valueC:
+    print('ini merupakan segitiga sama sisi')
+elif valueA == valueB:
+    valueC < valueA and valueB
+    print('ini merupakan segitiga sama kaki')
+elif V == (W):
+    print('ini merupakan segitiga siku-siku')
+elif S or T or U:
+    print('ini bukan merupakan segitiga')
+else:
+    print('ini merupakan segitiga sembarang')
