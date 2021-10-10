@@ -1,0 +1,42 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul  : Praktikum 3
+Hari,tanggal : Minggu, 20211010
+NIM : 065002100028
+@Author :Dzikra Muhamad Shafi
+"""
+#Display Program Welcome
+
+from cmath import sqrt
+
+A = int(input('Masukkan nilai A:'))
+B = int(input('Masukkan nilai B:'))
+C = int(input('Masukkan nilai C:'))
+
+
+print('Persamaan kuadrat', (A), "x^2 +", (B), 'x +', C)
+
+D = (B**2) - (4 * A * C)
+
+if A == 0:
+    print('Bukan merupakan akar kuadrat')
+elif D < 0:
+    print('determinannya adalah', D)
+    print('merupakan akar imajiner')
+    X1 = (-(B) + sqrt(D)) / (2 * A)
+    X2 = (-(B) - sqrt(D)) / (2 * A)
+    print('Akar X1 = ', X1)
+    print('Akar X2 = ', X2)
+elif D > 0:
+    print('determinannya =', D)
+    print('memiliki akar berbeda')
+    X1 = (-B + sqrt(D)) / (2 * A)
+    X2 = (-B - sqrt(D)) / (2 * A)
+    print('Akar X1 = ', X1)
+    print('Akar X2 = ', X2)
+else:
+    print('Determinannya = 0')
+    print('Merupakan akar kembar')   
+    X1 = (-B + sqrt(D)) / (2 * A)
+    print('Akar = ', X1)
