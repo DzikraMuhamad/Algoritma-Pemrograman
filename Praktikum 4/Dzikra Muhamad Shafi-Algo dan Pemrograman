@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul  : Praktikum Real Time 4
+Hari,tanggal : senin, 20211011 
+NIM : 065002100028
+@Author :Dzikra Muhamad Shafi
+"""
+#Display Program Welcome
+
+A = int(input('Masukkan Angka: '))
+for i in range(0,A):
+    for j in range(0,A):
+        print(A, end='')
+    A -= 1
+    print()
+   
