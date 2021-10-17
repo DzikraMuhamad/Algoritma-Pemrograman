@@ -1,0 +1,26 @@
+# -*- coding: utf-8 -*-
+"""
+judul : Laporan Praktikum 4
+hari/tanggal : minggu, 20211017
+NIM : 065002100028
+@author : Dzikra Muhamad Shafi
+"""
+L = True
+while L == True:
+    a = int(input('Enter the mounth(1-12): '))
+    if a == 0 or a < -2 or a > 12:
+        print('* invalid value entered:', a, '*')
+    elif a == 1 or a == 3 or a == 5 or a == 7 or a == 8 or a == 10 or a == 12:
+        print('there are 31 days in the mounth')
+    elif a == 4 or a == 6 or a == 9 or a == 11:
+        print('there are 30 days in the mounth')
+    elif a == 2:
+        y = int(input('enter the year: '))
+        if y % 4 == 0 and a == 2:
+            print('this is a leap year and 28 days in the mounth')
+        else:
+            print('there are 29 days in the mounth')
+    print('Enter -1 to stop the program')
+    if a == -1:
+        L = False
+        print('terimakasih sudah menggunakan program ini')
