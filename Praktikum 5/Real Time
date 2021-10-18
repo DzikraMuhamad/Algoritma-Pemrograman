@@ -13,7 +13,9 @@ y = 0
 while n != "":
     n = str(input('Masukkan Nilai:'))
     y += 1
-    if n == 'A':
+    if n == "":
+        break
+    elif n == 'A':
         print('Nilai = 4.00')
         x += 4.00
     elif n == 'A-':
