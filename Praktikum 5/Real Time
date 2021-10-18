@@ -52,3 +52,4 @@ if y == 1:
 else:
     R = x/(y-1)
     print('Rata-rata nilai =', R)
+
