@@ -1,0 +1,50 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul  : Praktikum 5
+Hari/tanggal : jumat, 20211122
+NIM : 065002100028
+@author : Dzikra Muhamad Shafi
+"""
+print('welcome to our tour')
+print('clik 0 to calculate your bill')
+n = 0
+a = 0
+
+while n == 0:
+    b = float(input('Enter Age :'))
+    if b == 0:
+        n = 1
+    elif (b <= 2) and b > 0:
+        print('free for child')
+        a += 0
+        c = print('total price = -')
+    elif b >= 3 and b <= 12:
+        print('the price is 14 dollars')
+        a += 14.00
+        print('total prices =', a)
+    elif b >= 65:
+        print('the price is 18 dollars')
+        a += 18.00
+        print('total prices =', a)
+    else:
+        print('the price is 23 dollars')
+        a += 23.00
+        print('total prices =', a)
+
+d = float(input('enter nominal :'))
+if d == a:
+    print('thank you please enjoy')
+elif d > a:
+    k = d - a
+    print('your remaining money is', k)
+elif d < a:
+    k = d - a
+    print("sorry you don't have enough money :", k)
+    s = float(input('enter less money: '))
+    if s == abs(k):
+        print('Thankyou please enjoy')
+    elif s > abs(k):
+        v = s - abs(k)
+        print('your remaining money is', v)
+        print('Thankyou please enjoy')
