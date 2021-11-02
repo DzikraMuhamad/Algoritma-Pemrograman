@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul  : Praktikum 7
+Hari/tanggal : Rabu, 20211103
+NIM : 065002100028
+@author : Dzikra Muhamad Shafi
+"""
+bosan = False
+print('This program will determine the number of days of a given month')
+while (not bosan):
+    print("Enter 0 to stop the program")
+    bulan = int(input('Masukkan Bulan: '))
+    tahun = int(input('Masukkan Tahun: '))
+    if bulan == 0:
+        bosan = True
+        print('Terimakasih telah menggunakan program kami')
+    def f(bulan,tahun):
+        if ((bulan < -2) or (bulan > 12)):
+            print('Error')
+        elif bulan == 1 or bulan == 3 or bulan == 5 or bulan == 7 or bulan == 8 or bulan == 10 or bulan == 12:
+            print('there are 31 days in the mounth')
+        elif bulan == 4 or bulan == 6 or bulan == 9 or bulan == 11:
+            print('there are 30 days in the mounth')
+        elif bulan == 2:
+            if (tahun % 4 == 0) and (not (tahun % 100 == 0) or (tahun % 400 == 0)):
+                print ("There are 29 days in the month")
+            else:
+                print("There are 28 days in the month")
+    f(bulan,tahun)
