@@ -1,0 +1,43 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul  : Praktikum 9
+Hari/tanggal : senin, 20211108
+NIM : 065002100028
+@author : Dzikra Muhamad Shafi
+"""
+
+print('Program ini menentukan bilangan prima dan komposit. Tekan 0 untuk menghentikan program ini.')
+F = False
+
+
+def Komposit():
+    print(nilai, 'adalah bilangan komposit')
+    import math
+    y = math.sqrt(nilai)
+    print(y, 'dikali', y, '=', nilai)
+
+
+def InputNilai(nilai):
+    if (nilai == 2):
+        print(nilai, 'adalah bilangan prima')
+    else:
+        g = 0
+        for i in range(2, nilai+1):
+            if nilai % i == 0:
+                stat = 1
+                g = g+stat
+        if g == 1:
+            print(nilai,'adalah bilangan prima')
+        else:
+            Komposit()
+    
+while (not F):
+    nilai = int(input('Masukkan Bilangan: '))
+    if nilai > 0:
+        g = 0
+        InputNilai(nilai)
+    elif nilai == 0:
+        F = True
+    else:
+        print('Error')
