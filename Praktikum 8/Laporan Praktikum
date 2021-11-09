@@ -1,0 +1,48 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul  : Praktikum 8
+Hari/tanggal : selasa, 20211110
+NIM : 065002100028
+@author : Dzikra Muhamad Shafi
+"""
+
+
+print('Program Menampilkan Urutan Peringkat')
+n = False
+
+
+def Nilai4(nilai):
+    print(nilai,'th')
+
+def Nilai3(nilai):
+    if str(nilai)[-1] == str(3):
+        print(nilai, 'rd')
+
+
+def Nilai2(nilai):
+    if str(nilai)[-1] == str(2):
+        print(nilai, 'nd')
+
+
+def Nilai1(nilai):
+    if str(nilai)[-1] == str(1):
+        print(nilai, 'st')
+    elif str(nilai)[-1] == str(2):
+        Nilai2(nilai)
+    elif str(nilai)[-1] == str(3):
+        Nilai3(nilai)
+    else:
+        Nilai4(nilai)
+
+
+
+while (not n):
+    print('Ketik Angka 0 Untuk Selesai')
+    nilai = input('Masukkan Angka: ')
+    if int(nilai) > 0:
+        Nilai1(nilai)
+    elif str(nilai) == str(0):
+        print(nilai, 'th')
+        n = True
+        print('Terima kasih:)')
