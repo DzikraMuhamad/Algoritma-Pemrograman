@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul  : Praktikum 9
+Hari/tanggal : senin, 20211115
+NIM : 065002100028
+@author : Dzikra Muhamad Shafi
+"""
+
+def f(angka=0, jumlah= 0, X=1):
+    if(jumlah <= 0):
+        return 0
+    else:
+        angka = int(input('masukkan bilangan ke-'+str(X)+': '))
+        if jumlah == 1:
+            return angka
+        else:
+            X += 1
+            return angka+f(angka,jumlah-1,X)
+
+total = int(input('Masukkan jumlah: '))
+nilai = f(jumlah=total)
+print('hasil dari penjumlahan adalah:' + str(nilai))
