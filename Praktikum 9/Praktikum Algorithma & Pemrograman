@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul  : Praktikum 9
+Hari/tanggal : kamis, 20211118
+NIM : 065002100028
+@author : Dzikra Muhamad Shafi
+"""
+print('ini merupakan program pemangkatan negatif dan positif, tekan enter untuk menghentikan program')
+
+
+a = False
+
+
+def hitungPangkat(bilangan, pangkat):
+  if pangkat > 1:
+    return bilangan * hitungPangkat(bilangan, pangkat - 1)
+  elif pangkat == 0:
+      return 1
+  else:
+    return bilangan
+
+while (not a):
+    bilangan = input('Masukkan bilangan: ')
+    
+    if bilangan:
+        pangkat = int(input('Masukkan pangkat: '))
+        hitungPangkat(int(bilangan),pangkat)
+        hasil = hitungPangkat(int(bilangan),pangkat)
+        print('Hasil =',hasil) 
+    elif bilangan == '':
+        a = True
