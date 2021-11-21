@@ -1,0 +1,42 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul  : Praktikum 9
+Hari/tanggal : kamis, 20211118
+NIM : 065002100028
+@author : Dzikra Muhamad Shafi
+"""
+print('Tekan 1 untuk mengubah desimal ke heksadesimal')
+print('Tekan 2 untuk mengubah heksadesimal ke desimal')
+
+f = False
+
+
+
+def DtoH(desimal):
+    print(int(desimal, 16))
+    
+def HtoD(desimal):
+    hexa = hex(desimal) .replace("bilangan heksadesimal=","")
+    print(hexa)
+
+n = input('Masukkan: ')
+
+while (not f):
+    if n == str(1):
+     print('program ini untuk mengubah desimal ke heksadesimal. tekan enter untuk selesai')
+     desimal = input('Masukkan Bilangan Desimal = ')
+     if desimal != '':
+      HtoD(int(desimal))
+     else:
+      f = True
+    if n == str(2):
+     print('program ini untuk mengubah heksadesimal ke desimal. tekan enter untuk selesai')
+     desimal = input('Masukkan bilangan Heksadesimal: ')
+     if desimal != '':
+      DtoH(desimal)
+     else:
+      f = True
+    elif n != 1 and n != 2 and n == '':
+        print('Error')
+        f = True
