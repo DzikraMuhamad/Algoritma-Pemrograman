@@ -1,0 +1,39 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul  : Praktikum 10
+Hari/tanggal : kamis, 20211126
+NIM : 065002100028
+@author : Dzikra Muhamad Shafi
+"""
+
+
+f = open("Biodata.txt", "w")
+nama = input('Siapa nama kamu: ')
+f.write(nama)
+umur = input('Berapa umur kamu : ')
+f.write(umur)
+alamat = input('Dimana alamat kamu: ')
+f.write(alamat)
+email = input('Alamat email kamu: ')
+f.write(email)
+dosen = input('Dosen wali kamu: ')
+f.write(dosen)
+f.close()
+
+
+g = open('Biodata.txt', 'w')
+print("")
+g.write('Ini adalah data kamu\n')
+data = 'Nama: {}\nUmur: {}\nAlamat: {}\nE-mail: {}\nDosen Wali: {}'.format(nama,umur,alamat,email,dosen)
+g.write(data)
+
+g.close()
+
+
+
+j = open('Biodata.txt', 'r')
+text = j.read()
+print(text)
+
+j.close()
