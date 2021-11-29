@@ -1,0 +1,75 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul  : Praktikum 10
+Hari/tanggal : kamis, 20211130
+NIM : 065002100028
+@author : Dzikra Muhamad Shafi
+"""
+
+x = False
+
+
+
+def CreatAndWrite(file,nama,nim,tahun):
+    if namaFile == file:
+        f = open('(namaFile)', 'w')
+        data = 'Nama : {}\nNIM : {}\nAngkatan : {}\n'.format(nama,nim,tahun)
+        f.write(data)
+    
+        f.close()
+    
+
+def TambahTeks(sahabat,tambahan):
+        h = open('(namaFile)', 'a')
+        catatan = 'Nama Sahabat : {}\nCatatan: {}'.format(sahabat,tambahan)
+        h.write(catatan)
+        h.close()
+
+def BacaFile(file):
+        g = open('(namaFile)', 'r')
+        text = g.read()
+        print(text)
+        g.close()
+        print('')
+    
+    
+ 
+
+while (not x):
+    print('==== Program File Handling ====')
+    print('1. Membuat dan Menulis File\n2. Membaca File\n3. Menambah Teks Pada File\n4. Keluar dari Program')
+    
+    masukkan = input('Masukkan pilihan berupa angka (1/2/3/4): ')
+    if masukkan == str(1):
+        namaFile = input('Masukkan Nama File: ')
+        file = (namaFile)
+        nama = input('Masukkan Nama Kamu: ')
+        nim = input('masukkan NIM Kamu: ')
+        tahun = input('Masukkan Tahun Angkatan Kamu: ')
+        CreatAndWrite(file,nama,nim,tahun)
+    elif masukkan == str(2):
+        namaFile1 = input('Masukkan Nama File: ')
+        file = (namaFile)
+        if namaFile1 == file:
+            BacaFile(file)
+        else:
+            print('File belum tersedia')
+            print('')
+            masukkan = str(1)
+            
+    elif masukkan == str(3):
+        namaFile2 = input('Masukkan Nama File: ')
+        file = (namaFile)
+        if namaFile2 == file:
+            sahabat = input('Masukkan Nama Sahabat Kamu: ')
+            tambahan = input('Masukkan Catatan Tambahan Kamu: ')
+            TambahTeks(sahabat,tambahan)
+        else:
+            print('File belum tersedia')
+            print('')
+            masukkan = str(1)
+    elif masukkan == str(4):
+        print('terima Kasih Sudah Menggunakan Program Saya')
+        x = True
+    
