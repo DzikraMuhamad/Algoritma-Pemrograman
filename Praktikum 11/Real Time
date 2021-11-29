@@ -1,0 +1,48 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul  : Praktikum 11
+Hari/tanggal : kamis, 20211129
+NIM : 065002100028
+@author : Dzikra Muhamad Shafi
+"""
+
+# Iterative Binary Search Function
+def binarySearch(arr, l, r, x): 
+	while l <= r: 
+		mid = (r+l)//2;
+		if arr[mid] == int(x): 
+			return mid
+		elif arr[mid] < int(x): 
+			l = mid + 1
+		else: 
+			r = mid - 1
+	return -1
+
+# BubbleSorting
+def bubbleSort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0,n-i-1):
+            if arr[j]> arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+   
+     
+arr = [ 200, 87,89, 56, 31, 34, 23, 28, 15, 2]
+
+bubbleSort(arr)
+print('Sebelum di sorting: [ 200, 87,89, 56, 31, 34, 23, 28, 15, 2] ')
+
+
+arr = [ 200, 87,89, 56, 31, 34, 23, 28, 15, 2]
+
+x = input('Masukkan angka yang dicari: ')
+bubbleSort(arr)
+print('Sesudah di sorting:', arr)
+
+result = binarySearch(arr, 0, len(arr)-1, x) 
+if result != -1: 
+	print ("Element ditemukan pada index %d" % result)
+else: 
+	print ("Element tidak ditemukan pada list")
+    
