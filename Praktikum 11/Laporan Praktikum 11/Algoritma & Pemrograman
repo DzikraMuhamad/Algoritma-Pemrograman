@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul  : Praktikum 11
+Hari/tanggal : Rabu, 20211201
+NIM : 065002100028
+@author : Dzikra Muhamad Shafi
+"""
+# Buble sort dengan rekursive
+def swap(A, i, j):
+ 
+    temp = A[i]
+    A[i] = A[j]
+    A[j] = temp
+
+def f(A, n):
+ 
+    for i in range(n - 1):
+        if A[i] > A[i + 1]:
+            swap(A, i, i + 1)
+ 
+    if n - 1 > 1:
+        f(A, n - 1)
+ 
+ 
+if __name__ == '__main__':
+    print('Data sebelum di sortir: [1,3,7,88,90,4,33,6,6,7,2,9,20]')
+    A = [1,3,7,88,90,4,33,6,6,7,2,9,20]
+    f(A, len(A))
+    print('Data Sesudah di sortir: ', A)
