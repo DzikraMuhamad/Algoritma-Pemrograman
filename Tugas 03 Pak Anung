@@ -1,0 +1,39 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul  : Praktikum 10
+Hari/tanggal : kamis, 20211130
+NIM : 065002100028
+@author : Dzikra Muhamad Shafi
+"""
+
+import csv
+
+with open('certification.csv') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=",")
+    print(csv_reader)
+    for row in csv_reader:
+        print(row)
+
+print('')
+
+h = open('certification.txt', 'r')
+nilai = []
+
+for line in h:
+    data = line.split()
+    nilai.append(float(data[-1]))
+    
+
+h.close()
+print('total jumlah peserta: ', len(nilai))
+rerata = (sum(nilai)/len(nilai))
+maximum = max(nilai)
+minimum  = min(nilai)
+print('Peserta dengan nilai tertinggi: ', maximum)
+print('Peserta dengan nilai terendah: ', minimum)
+
+listku = [item for item in nilai if item > 80.00]
+a = len(listku)
+print(f'Daftar nilai peserta yang lulus ujian: {listku}\nSebanyak: {a}')
+
