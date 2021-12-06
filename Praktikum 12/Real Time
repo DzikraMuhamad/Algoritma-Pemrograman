@@ -1,0 +1,38 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul  : Praktikum Real Time 12
+Hari/tanggal : Senin, 20211206
+NIM : 065002100028
+@author : Dzikra Muhamad Shafi
+"""
+
+f = False
+
+class Biodatadiri:
+    bioCount = 0
+    
+    def __init__(self, nama_mahasiswa, nim_mahasiswa, angkatan_mahasiswa):
+        self.nama_mahasiswa = nama
+        self.nim_mahasiswa = nim
+        self.angkatan_mahasiswa = angkatan
+        Biodatadiri.bioCount += 1
+        
+    def printbiodata(self):
+        print("")
+        print("Nama: " + self.nama_mahasiswa + "\nNIM: " + str(self.nim_mahasiswa) + "\nAngkatan: " + str(self.angkatan_mahasiswa))
+           
+while not f:
+    print('tekan 1 untuk memulai program dan tekan -1 untuk menghentikan program')
+    a = input('masukkan : ')
+    if a == str(1):
+        nama = input('Masukkan nama kamu: ')
+        nim = input('Masukkan NIM kamu: ')
+        angkatan = input('Tahun angkatan kamu: ')
+
+        bio1 = Biodatadiri("{nama}", "{nim}", "{angkatan}")
+        bio1.printbiodata()
+
+        print("Jumlah mahasiswa yang dimasukkan kedalam objek adalah: ", Biodatadiri.bioCount)
+    elif a == str(-1):
+        f = True
