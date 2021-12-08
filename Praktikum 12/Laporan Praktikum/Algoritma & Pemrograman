@@ -1,0 +1,71 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul  : Laporan Praktikum 12
+Hari/tanggal : Kamis, 20211209
+NIM : 065002100028
+@author : Dzikra Muhamad Shafi
+"""
+
+f = False
+
+class AturData:
+    
+    def __init__(self, namaku, nilaiku):
+        self.namaku = namaku
+        self.nilaiku = nilaiku
+        
+    #getter
+    def DeklarasiObjek(self):
+        print('')
+        print("Data berhasil ditambahkan")
+        
+    def TampilObjek(self):
+        print("")
+        print("Nama: ", self.namaku, "\nNilai: ", self.nilaiku)
+    
+    
+    #setter
+    def SetObjek(self):
+        b = input("Apa yang ingin diubah (Nama/Nilai): ")
+        n = (b.capitalize())
+        if n == 'Nama':
+            namabaru = input("Masukkan nama: ")
+            self.namaku = namabaru
+            print("Data berhasil diperbarui")
+        elif n == 'Nilai':
+            nilaibaru = input("Masukkan nilai: ")
+            self.nilaiku = nilaibaru
+            print("Data berhasil diperbarui")
+    
+    def HapusObjek(self):
+        self.namaku = None
+        self.nilaiku = None
+        print("Data berhasil dihapus")
+
+while (not f):
+    print("")
+    print("==== Program OOP ====")
+    print("1. Mendeklarasikan Objek\n2. Menampilkan Objek\n3. Merubah Nilai Objek\n4. Menghapus Objek\n5. Keluar Dari Program")
+    print("")
+    a = input('Masukkan pilihan berupa angka(1/2/3/4/5): ')
+    
+    if a == str(1):
+        namaku = input("Masukkan Namamu: ")
+        nilaiku = input("Masukkan Nilaimu: ")
+        bio1 = AturData(namaku,nilaiku)   
+        bio1.DeklarasiObjek()
+    
+    elif a == str(2):
+        bio1.TampilObjek()
+        
+    elif a == str(3):
+        bio1.SetObjek()
+    
+    elif a == str(4):
+        bio1.HapusObjek()
+    
+    elif a == str(5):
+        print("Terima kasih telah menggunakan program kami")
+        f = True
+        
