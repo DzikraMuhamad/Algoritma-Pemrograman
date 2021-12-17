@@ -1,0 +1,22 @@
+# -*- coding: utf-8 -*-
+"""
+Materi : Algoritma Pemrograman
+Judul  : Laporan Praktikum 12
+Hari/tanggal : Kamis, 20211209
+NIM : 065002100028
+@author : Dzikra Muhamad Shafi
+"""
+
+
+import pandas as pd
+
+df = pd.read_csv("C:/Lab/algo/negara.csv")
+
+mean = df.groupby(['Benua']).mean()
+std = df.groupby(['Benua']).std()
+
+print(df)
+print('\nBerikut Data Mean')
+print(mean)
+print('\nBerikut Data Standard Deviation')
+print(std) 
